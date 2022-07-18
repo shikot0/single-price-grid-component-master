@@ -1,0 +1,123 @@
+* {
+    font-family: 'Karla', 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+body {
+    margin: 0;
+    background-color: whitesmoke;
+}
+.grid {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 55%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 10px;
+}
+.info {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: white;
+    border-radius: 6px 6px 0px 0px;
+    padding: 35px;
+}
+h2 {
+    color: hsl(179, 62%, 43%);
+}
+h4 {
+    color: hsl(71, 73%, 54%);
+}
+p {
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(204, 33%, 84%);
+}
+.subscription {
+    background-color: hsl(179, 62%, 43%);
+    color: white;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 0px 0px 6px;
+}
+.subscription h3 {
+    letter-spacing: 2px;
+}
+.pricing {
+    display: flex;
+    align-items: center;
+}
+.subscription-price {
+    margin-right: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.pricing p {
+    font-weight: 200;
+}
+.subscription h4 {
+    color: hsl(204, 33%, 84%);
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+button {
+    color: white;
+    background-color: hsl(71, 73%, 54%);
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    height: 60px;
+    transition: 0.4s;
+    box-shadow: 0px 2px 10px rgb(5, 101, 75);
+}
+button:hover {
+    transform: scale(1.1);
+    /* letter-spacing: 2px; */
+    animation: spacing 0.4s ease-in-out 1 forwards;
+    cursor: pointer;
+}
+@keyframes spacing {
+    50% {
+        word-spacing: -90px;
+    }
+    100% {
+        word-spacing: 0px;
+    }
+}
+.why-us {
+    background-color: hsl(179, 57%, 47%);
+    padding: 35px;
+    color: hsl(204, 33%, 84%);
+    border-radius: 0px 0px 6px 0px;
+}
+.why-us h3 {
+    color: #fff;
+}
+.why-us ul {
+    padding-left: 0px;
+}
+.why-us ul li {
+    list-style: none;
+    margin: 4px 0px 0px 0px;
+}
+.attribution {
+    margin-top: 100px;
+}
+@media screen and (max-width: 920px ) {
+    .grid {
+        grid-template-columns: 1fr;
+        width: 80vw;
+    }
+    .info {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .subscription {
+        border-radius: 0;
+    }
+    .why-us {
+        border-radius: 0px 0px 6px 6px;
+    }
+}
